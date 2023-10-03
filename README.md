@@ -9,6 +9,10 @@
     <a href="https://arxiv.org/pdf/2310.00754.pdf"><img src="assets/Paper-Arxiv-orange.svg" ></a>
 </div>
 
+## News
+* 🔥 [10.03] Our code and data have been organized and are about to be released!
+* [10.03] Our paper is online now: https://arxiv.org/pdf/2310.00754.pdf.
+
 ## Citation
 If you found this work useful, consider giving this repository a star and citing our paper as followed:
 ```
