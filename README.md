@@ -25,3 +25,48 @@ If you found this work useful, consider giving this repository a star and citing
       primaryClass={cs.LG}
 }
 ```
+## Getting Started
+### Installation
+
+**1. Prepare the code and the environment**
+
+Git clone our repository, creating a python environment and ativate it via the following command
+
+```bash
+git clone https://github.com/YiyangZhou/LURE.git
+cd LURE
+conda env create -f environment.yml
+conda activate LURE
+```
+
+
+**2. Prepare the pretrained Vicuna weights**
+
+The current version of MiniGPT-4 is built on the v0 versoin of Vicuna-13B.
+Please refer to our instruction [here](PrepareVicuna.md) 
+to prepare the Vicuna weights.
+The final weights would be in a single folder in a structure similar to the following:
+
+```
+vicuna_weights
+├── config.json
+├── generation_config.json
+├── pytorch_model.bin.index.json
+├── pytorch_model-00001-of-00003.bin
+...   
+```
+
+Then, set the path to the vicuna weight in the model config file 
+[here](minigpt4/configs/models/minigpt4.yaml#L16) at Line 16.
+
+**3. Prepare the pretrained MiniGPT-4 checkpoint**
+
+Download the pretrained checkpoints according to the Vicuna model you prepare.
+
+|                                Checkpoint Aligned with Vicuna 13B                                |                               Checkpoint Aligned with Vicuna 7B                                |
+:------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------:
+ [Downlad](https://drive.google.com/file/d/1a4zLvaiDBr-36pasffmgpvH5P7CKmpze/view?usp=share_link) | [Download](https://drive.google.com/file/d/1RY9jV0dyqLX-o38LrumkKRh6Jtaop58R/view?usp=sharing) 
+
+
+Then, set the path to the pretrained checkpoint in the evaluation config file 
+in [eval_configs/minigpt4_eval.yaml](eval_configs/minigpt4_eval.yaml#L10) at Line 11. 
