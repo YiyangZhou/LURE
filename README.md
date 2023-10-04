@@ -63,9 +63,9 @@ Then, set the path to the vicuna weight in the model config file
 
 Download the pretrained checkpoints according to the Vicuna model you prepare.
 
-|                                Checkpoint Aligned with Vicuna 13B                                |                               Checkpoint Aligned with Vicuna 7B                                |
-:------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------:
- [Downlad](https://drive.google.com/file/d/1a4zLvaiDBr-36pasffmgpvH5P7CKmpze/view?usp=share_link) | [Download](https://drive.google.com/file/d/1RY9jV0dyqLX-o38LrumkKRh6Jtaop58R/view?usp=sharing) 
+|                                Checkpoint Aligned with Vicuna 13B                                | 
+:------------------------------------------------------------------------------------------------:|
+ [Downlad]() | [Download]() 
 
 
 Then, set the path to the pretrained checkpoint in the evaluation config file 
