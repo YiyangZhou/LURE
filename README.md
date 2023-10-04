@@ -72,13 +72,25 @@ Then, set the path to the pretrained checkpoint in the evaluation config file
 in [eval_configs/minigpt4_eval.yaml](eval_configs/minigpt4_eval.yaml#L10) at Line 11. 
 
 
-### Model inference
+### Model Inference
 Prepare model inputs.
 ```
 
 ```
-### Model finetuning
+### Model Finetuning
 The training samples are stored in xxx.jsonl and orgnized in the following format:
 ```
 
 ```
+To launch the second stage alignment, 
+first specify the path to the checkpoint file trained in stage 1 in 
+[train_configs/minigpt4_stage1_pretrain.yaml](train_configs/minigpt4_stage2_finetune.yaml).
+You can also specify the output path there. 
+Then, run the following command. In our experiments, we use 1 A100.
+
+```bash
+torchrun --nproc-per-node NUM_GPU train.py --cfg-path train_configs/minigpt4_stage2_finetune.yaml
+```
+
+
+
