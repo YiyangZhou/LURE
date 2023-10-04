@@ -70,3 +70,15 @@ Download the pretrained checkpoints according to the Vicuna model you prepare.
 
 Then, set the path to the pretrained checkpoint in the evaluation config file 
 in [eval_configs/minigpt4_eval.yaml](eval_configs/minigpt4_eval.yaml#L10) at Line 11. 
+
+
+### Model inference
+Prepare model inputs.
+```
+
+```
+### Model finetuning
+The training samples are stored in xxx.jsonl and orgnized in the following format:
+```
+
+```
