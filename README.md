@@ -61,7 +61,7 @@ Then, set the path to the vicuna weight in the model config file
 
 **3. Prepare the pretrained MiniGPT-4 checkpoint**
 
-Download the pretrained checkpoints according to the Vicuna model you prepare.
+Download the pretrained checkpoints of the Vicuna model.
 
 |                                Checkpoint Aligned with Vicuna 13B                                | 
 :------------------------------------------------------------------------------------------------:|
