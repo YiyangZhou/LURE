@@ -92,7 +92,6 @@ dataset
     ...   
 ```
 
-```
 
 Then, set the path to the dataset in the dataset config file xxx.
 To launch the second stage alignment, 
