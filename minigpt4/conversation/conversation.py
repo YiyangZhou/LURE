@@ -170,7 +170,7 @@ class Chat:
             output_token = output_token[1:]
         output_text = self.model.llama_tokenizer.decode(output_token, add_special_tokens=False)
         output_text = output_text.split('###')[0]  # remove the stop sign '###'
-        output_text = output_text.split('Assistant:')[-1].strip()
+        output_text = (output_text.split('Assistant:')[-1]).split('\n')[0].strip()
         tokens = nltk.word_tokenize(output_text)
         pos_tags = nltk.pos_tag(tokens)
         u_wordlist=list()
