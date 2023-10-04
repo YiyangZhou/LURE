@@ -78,10 +78,23 @@ Prepare model inputs.
 
 ```
 ### Model Finetuning
-The training samples are stored in xxx.jsonl and orgnized in the following format:
+The training samples are stored in xxx.json and orgnized in the following format:
 ```
 
 ```
+The dataset would be a single folder in a structure as the following:
+```
+dataset
+├── filter_cap.json
+└── image
+    ├── 2.jpg
+    ├── 3.jpg
+    ...   
+```
+
+```
+
+Then, set the path to the dataset in the dataset config file xxx.
 To launch the second stage alignment, 
 first specify the path to the checkpoint file trained in stage 1 in 
 [train_configs/minigpt4_stage1_pretrain.yaml](train_configs/minigpt4_stage2_finetune.yaml).
