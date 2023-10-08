@@ -11,7 +11,7 @@ from enum import auto, Enum
 from typing import List, Tuple, Any
 
 from minigpt4.common.registry import registry
-import nltk
+# import nltk
 
 
 #nltk.download('punkt')
@@ -151,7 +151,7 @@ class Chat:
 
         embs = embs[:, begin_idx:]
 
-        outputs, probs = self.model.llama_model.generate(
+        outputs = self.model.llama_model.generate(
             inputs_embeds=embs,
             max_new_tokens=max_new_tokens,
             stopping_criteria=self.stopping_criteria,
@@ -171,30 +171,6 @@ class Chat:
         output_text = self.model.llama_tokenizer.decode(output_token, add_special_tokens=False)
         output_text = output_text.split('###')[0]  # remove the stop sign '###'
         output_text = (output_text.split('Assistant:')[-1]).split('\n')[0].strip()
-        tokens = nltk.word_tokenize(output_text)
-        pos_tags = nltk.pos_tag(tokens)
-        u_wordlist=list()
-        wordlist = list()
-        p_list= list()
-        p_all = {}
-        for word, pos in pos_tags:
-            inputs = self.model.llama_tokenizer(word, return_tensors="pt", add_special_tokens=False).to(self.device).input_ids
-            if word not in p_all.keys():
-                p_all[word] = list()
-            if word not in wordlist and pos.startswith('NN'):
-                wordlist.append(word)                
-            for i in range(inputs.shape[0]):
-                token = inputs[0, i]
-                if  torch.where(output_token == token)[0].numel() != 0:
-                        toke_idx = torch.where(output_token == token)[0][0]
-                        p_all[word].append(probs[toke_idx,token].cpu().item())
-                        if -np.log(probs[toke_idx,token].cpu())>0.9:
-                            if word not in u_wordlist and pos.startswith('NN'):
-                                u_wordlist.append(word)
-                                p_list.append(probs[toke_idx,token])
-                                break
-
-
         conv.messages[-1][1] = output_text
 
         return output_text, output_token.cpu().numpy(), probs, u_wordlist, wordlist, p_list, p_all
