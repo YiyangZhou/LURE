@@ -79,7 +79,7 @@ Prepare model inputs.
 ```
 Then, run the following command:
 ```bash
-python output_LURE.py --cfg-path /path/to/config.yaml --gpu-id 1 --input_caption /path/to/caption_file  --input_image /path/to/image_file --output_file /path/to/output.jsonl
+python output_LURE.py --cfg-path /path/to/config.yaml --gpu-id gpu-id --input_caption /path/to/caption_file  --input_image /path/to/image_file --output_file /path/to/output.jsonl
 ```
 ### Model Finetuning
 The training samples are stored in xxx.json and orgnized in the following format:
