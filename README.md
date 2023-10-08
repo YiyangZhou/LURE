@@ -73,7 +73,7 @@ in [eval_configs/minigpt4_eval.yaml](eval_configs/minigpt4_eval.yaml#L10) at Lin
 
 
 ### Model Inference
-Prepare model inputs.
+Prepare model inputs in the format similiar to the following:
 ```
 
 ```
