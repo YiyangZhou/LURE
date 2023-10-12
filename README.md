@@ -31,8 +31,11 @@ conda activate LURE
 **2. Prepare the pretrained Vicuna weights**
 
 The current version of MiniGPT-4 is built on the v0 versoin of Vicuna-13B.
-Please refer to our instruction [here](PrepareVicuna.md) 
-to prepare the Vicuna weights.
+Download the corresponding LLM weights from the following huggingface space via clone the repository using git-lfs.
+|                                          Vicuna V0 13B                                           |
+:------------------------------------------------------------------------------------------------:
+ [Downlad](https://huggingface.co/Vision-CAIR/vicuna/tree/main) 
+
 The final weights would be in a single folder in a structure similar to the following:
 
 ```
