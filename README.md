@@ -63,15 +63,21 @@ Then, set the path to the pretrained checkpoint in the evaluation config file
 in [eval_configs/minigpt4_eval.yaml](eval_configs/minigpt4_eval.yaml#L11) at Line 11. 
 
 **4. How to train your own LURE?**
+
 **(step 1)** Prepare data set
 You can modify your data set path [here](minigpt4/configs/datasets/cc_sbu/align.yaml#L5) at Line 5.
 The final dataset path would be organized in a single folder, following a structure similar to what's described below:
 
 ```
 dataset
-├── /image
 ├── filter_cap.json
+└── image
+    ├── 2.jpg
+    ├── 3.jpg
+    ...   
 ```
+
+The file filter_cap.json contains our prepared 5000 LURE training data entries. Each sample within includes three fields: 'image_id', which represents the name of the image in the training data; 'caption', which denotes the detailed description obtained from [LLaVA-Instruct-150K](https://huggingface.co/datasets/liuhaotian/LLaVA-Instruct-150K/tree/main) corresponding to the image; and 'h_caption', which signifies the hallucinated description we constructed based on 'caption' (this might include ambiguous objects and contributing objects).
 
 
 ### Model Inference
@@ -97,8 +103,6 @@ dataset
     ├── 3.jpg
     ...   
 ```
-The file filter_cap.json contains our prepared 5000 LURE training data entries. Each sample within includes three fields: 'image_id', which represents the name of the image in the training data; 'caption', which denotes the detailed description obtained from [LLaVA-Instruct-150K](https://huggingface.co/datasets/liuhaotian/LLaVA-Instruct-150K/tree/main) corresponding to the image; and 'h_caption', which signifies the hallucinated description we constructed based on 'caption' (this might include ambiguous objects and contributing objects).
-
 
 Then, set the path to the dataset in the dataset config file xxx.
 To launch the second stage alignment, 
