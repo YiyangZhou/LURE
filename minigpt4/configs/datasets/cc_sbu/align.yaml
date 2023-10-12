@@ -1,5 +1,0 @@
-datasets:
-  cc_sbu_align:
-    data_type: images
-    build_info:
-      storage: /iris/u/huaxiu/ch/mgpt-4/coco17
