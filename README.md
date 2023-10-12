@@ -64,7 +64,7 @@ in [eval_configs/minigpt4_eval.yaml](eval_configs/minigpt4_eval.yaml#L11) at Lin
 
 **4. How to train your own LURE?**
 
-**(step 1)** Prepare dataset
+**(Step 1)** Prepare dataset
 
 You can modify your data set path [here](minigpt4/configs/datasets/cc_sbu/align.yaml#L5) at Line 5.
 The final dataset path would be organized in a single folder, following a structure similar to what's described below:
@@ -82,6 +82,15 @@ The file *'filter_cap.json'* contains our prepared 5000 LURE training data entri
 
 The images can be directly downloaded from [coco2014 train](https://cocodataset.org/#download). As for *'filter_cap.json'*, we have already prepared a version containing data masked for uncertain objects, which can be found at [here](dataset_train/). We have also uploaded a dataset (*'hallucination5k_train.jsonl'*) without masks, which includes several fields: *'value'* represents the corresponding *'caption'* in *'filter_cap.json'*, while *'h_value'* represents the unmasked version of *'h_caption'* in *'filter_cap.json'*. Additionally, *'co_objects'* indicates the co-occurring objects extracted by GPT, and *'uncertain_objects'* represents the uncertain objects extracted by LVLMs during the image description process.
 
+**(Step 2)** Training
+
+To launch the second stage alignment, first specify the path to the initial checkpoint file in [train_configs/minigpt4_stage1_pretrain.yaml](train_configs/minigpt4_stage2_finetune.yaml).
+You can also specify the output path there. 
+Then, run the following command. In our experiments, we use 1 A100 80G.
+
+```bash
+torchrun --nproc-per-node NUM_GPU train.py --cfg-path train_configs/minigpt4_stage2_finetune.yaml
+```
 
 
 
@@ -94,31 +103,7 @@ Then, run the following command:
 ```bash
 python output_LURE.py --cfg-path /path/to/config.yaml --gpu-id gpu-id --input_caption /path/to/caption_file  --input_image /path/to/image_file --output_file /path/to/output.jsonl
 ```
-### Model Finetuning
-The training samples are stored in xxx.json and orgnized in the following format:
-```
 
-```
-The dataset would be a single folder in a structure as the following:
-```
-dataset
-├── filter_cap.json
-└── image
-    ├── 2.jpg
-    ├── 3.jpg
-    ...   
-```
-
-Then, set the path to the dataset in the dataset config file xxx.
-To launch the second stage alignment, 
-first specify the path to the checkpoint file trained in stage 1 in 
-[train_configs/minigpt4_stage1_pretrain.yaml](train_configs/minigpt4_stage2_finetune.yaml).
-You can also specify the output path there. 
-Then, run the following command. In our experiments, we use 1 A100.
-
-```bash
-torchrun --nproc-per-node NUM_GPU train.py --cfg-path train_configs/minigpt4_stage2_finetune.yaml
-```
 ## Citation
 If you found this work useful, consider giving this repository a star and citing our paper as followed:
 ```
