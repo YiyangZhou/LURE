@@ -60,7 +60,7 @@ Download the pretrained checkpoints of the Vicuna model.
 
 
 Then, set the path to the pretrained checkpoint in the evaluation config file 
-in [eval_configs/minigpt4_eval.yaml](eval_configs/minigpt4_eval.yaml#L10) at Line 11. 
+in [eval_configs/minigpt4_eval.yaml](eval_configs/minigpt4_eval.yaml#L11) at Line 11. 
 
 
 ### Model Inference
