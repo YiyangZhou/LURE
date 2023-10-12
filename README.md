@@ -13,18 +13,6 @@
 * 🔥 [10.03] Our code and data have been organized and are about to be released!
 * [10.03] Our paper is online now: https://arxiv.org/pdf/2310.00754.pdf.
 
-## Citation
-If you found this work useful, consider giving this repository a star and citing our paper as followed:
-```
-@misc{zhou2023analyzing,
-      title={Analyzing and Mitigating Object Hallucination in Large Vision-Language Models}, 
-      author={Yiyang Zhou and Chenhang Cui and Jaehong Yoon and Linjun Zhang and Zhun Deng and Chelsea Finn and Mohit Bansal and Huaxiu Yao},
-      year={2023},
-      eprint={2310.00754},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG}
-}
-```
 ## Getting Started
 ### Installation
 
@@ -107,6 +95,17 @@ Then, run the following command. In our experiments, we use 1 A100.
 ```bash
 torchrun --nproc-per-node NUM_GPU train.py --cfg-path train_configs/minigpt4_stage2_finetune.yaml
 ```
-
+## Citation
+If you found this work useful, consider giving this repository a star and citing our paper as followed:
+```
+@misc{zhou2023analyzing,
+      title={Analyzing and Mitigating Object Hallucination in Large Vision-Language Models}, 
+      author={Yiyang Zhou and Chenhang Cui and Jaehong Yoon and Linjun Zhang and Zhun Deng and Chelsea Finn and Mohit Bansal and Huaxiu Yao},
+      year={2023},
+      eprint={2310.00754},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
+```
 
 
