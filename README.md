@@ -70,7 +70,7 @@ You can modify your data set path [here](minigpt4/configs/datasets/cc_sbu/align.
 The final dataset path would be organized in a single folder, following a structure similar to what's described below:
 
 ```
-dataset
+dataset_train
 ├── filter_cap.json
 └── image
     ├── 2.jpg
@@ -80,7 +80,7 @@ dataset
 
 The file *'filter_cap.json'* contains our prepared 5000 LURE training data entries. Each sample within includes three fields: *'image_id'* , which represents the name of the image in the training data; *'caption'*, which denotes the detailed description obtained from [LLaVA-Instruct-150K](https://huggingface.co/datasets/liuhaotian/LLaVA-Instruct-150K/tree/main) corresponding to the image; and *'h_caption'*, which signifies the hallucinated description we constructed based on *'caption'* (this might include ambiguous objects and contributing objects).
 
-The images can be directly downloaded from [coco2014 train](https://cocodataset.org/#download). As for *'filter_cap.json'*, we have already prepared a version containing data masked for uncertain objects, which can be found at xxx.
+The images can be directly downloaded from [coco2014 train](https://cocodataset.org/#download). As for *'filter_cap.json'*, we have already prepared a version containing data masked for uncertain objects, which can be found at [here](dataset_train/).
 
 
 
