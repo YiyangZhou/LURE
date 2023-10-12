@@ -78,7 +78,7 @@ dataset
     ...   
 ```
 
-The file 'filter_cap.json' contains our prepared 5000 LURE training data entries. Each sample within includes three fields: 'image_id', which represents the name of the image in the training data; 'caption', which denotes the detailed description obtained from [LLaVA-Instruct-150K](https://huggingface.co/datasets/liuhaotian/LLaVA-Instruct-150K/tree/main) corresponding to the image; and 'h_caption', which signifies the hallucinated description we constructed based on 'caption' (this might include ambiguous objects and contributing objects).
+The file <mark>filter_cap.json</mark> contains our prepared 5000 LURE training data entries. Each sample within includes three fields: <mark>image_id</mark> , which represents the name of the image in the training data; <mark>caption</mark>, which denotes the detailed description obtained from [LLaVA-Instruct-150K](https://huggingface.co/datasets/liuhaotian/LLaVA-Instruct-150K/tree/main) corresponding to the image; and 'h_caption', which signifies the hallucinated description we constructed based on 'caption' (this might include ambiguous objects and contributing objects).
 
 
 ### Model Inference
