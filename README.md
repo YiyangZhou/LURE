@@ -52,11 +52,11 @@ Then, set the path to the vicuna weight in the model config file
 
 **3. Prepare the pretrained MiniGPT-4 checkpoint**
 
-Download the pretrained checkpoints of the Vicuna model.
+Download the pretrained checkpoints according to the Vicuna model from [MiniGPT-4](https://github.com/Vision-CAIR/MiniGPT-4).
 
 |                                Checkpoint Aligned with Vicuna 13B                                | 
 :------------------------------------------------------------------------------------------------:|
- [Downlad]() | [Download]() 
+ [Downlad](https://drive.google.com/file/d/1a4zLvaiDBr-36pasffmgpvH5P7CKmpze/view?usp=share_link)
 
 
 Then, set the path to the pretrained checkpoint in the evaluation config file 
