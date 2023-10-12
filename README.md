@@ -84,7 +84,7 @@ The images can be directly downloaded from [coco2014 train](https://cocodataset.
 
 **(Step 2)** Training
 
-To launch the second stage alignment, first specify the path to the initial checkpoint file in [train_configs/minigpt4_stage1_pretrain.yaml](train_configs/minigpt4_stage2_finetune.yaml).
+To launch the second stage alignment, first specify the path to the initial checkpoint file in [train_configs/minigpt4_stage2_pretrain.yaml](train_configs/minigpt4_stage2_finetune.yaml).
 You can also specify the output path there. 
 Then, run the following command. In our experiments, we use 1 A100 80G.
 
