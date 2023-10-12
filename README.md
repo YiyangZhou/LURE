@@ -62,6 +62,9 @@ Download the pretrained checkpoints according to the Vicuna model from [MiniGPT-
 Then, set the path to the pretrained checkpoint in the evaluation config file 
 in [eval_configs/minigpt4_eval.yaml](eval_configs/minigpt4_eval.yaml#L11) at Line 11. 
 
+**4. How to train your own LURE?**
+
+
 
 ### Model Inference
 Prepare model inputs in the format similiar to the following:
