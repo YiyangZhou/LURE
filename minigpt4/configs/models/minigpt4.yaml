@@ -13,7 +13,7 @@ model:
   num_query_token: 32
 
   # Vicuna
-  llama_model: "/iris/u/huaxiu/ch/mgpt-4/vicuna-13b-v1.1"
+  llama_model: "path/to/llama_model"
 
   # generation configs
   prompt: ""
