@@ -95,13 +95,25 @@ torchrun --nproc-per-node NUM_GPU train.py --cfg-path train_configs/minigpt4_sta
 
 
 ### Model Inference
-Prepare model inputs in the format similiar to the following:
-```
+Prepare model captions in the format similiar to the following:
 
 ```
-Then, run the following command:
+{"id": "image_path", "answer": "caption of LLVM",  "p_all": {"word1": [probs, ...], "word2": [probs,...]}, "uncertain_objs": ["city", "cars", "image", "markings", "shutters"], "objs": ["city", "street", "cars", "bus", "trees", "side", "road", "buildings", "background", "image", "models", "colors", "markings", "car", "shutters"]}
+```
+
+ For extracting objects from sentences, natural language processing (NLP) libraries can be used for part-of-speech tagging or named entity recognition, such as NLTK (Natural Language Toolkit) and SpaCy. 
+To output probabilities, we modify the generation/utils.py file in the Transformers library to generate probabilities for each token. We store the probability of each word's first token in a dictionary named 'p_all'.
+
+To get the masked caption of  prepared captions,  run the following command:
+
 ```bash
-python output_LURE.py --cfg-path /path/to/config.yaml --gpu-id gpu-id --input_caption /path/to/caption_file  --input_image /path/to/image_file --output_file /path/to/output.jsonl
+python generate_IDK.py   --input_file /path/to/caption_file.jsonl  --output_file /path/to/idk_caption_file.jsonl
+```
+
+
+Then, run the following command to obtain the rewriting response:
+```bash
+python output_LURE.py --cfg-path /path/to/config.yaml --gpu-id gpu-id --input_caption /path/to/idk_caption_file  --input_image /path/to/image_file --output_file /path/to/output.jsonl
 ```
 
 ## Citation
