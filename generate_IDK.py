@@ -27,7 +27,7 @@ def split_words(text):
 def replace_words_with_idk(sentence, objlist, p_all, un):
     words = (sentence.replace('.', ' .').replace(',', ' ,')).split()
     num_words = len(words)
-    num_replacement = int(num_words * 0.2)  # 计算需要替换的单词数量
+    num_replacement = int(num_words * 0.2) 
     del_list=list()
     for i in range(num_words - num_replacement, num_words):
         if words[i] in objlist or words[i][:-1] in objlist or words[i][:-2] in objlist or words[i][:-3] in objlist \
