@@ -98,7 +98,7 @@ torchrun --nproc-per-node NUM_GPU train.py --cfg-path train_configs/minigpt4_sta
 Prepare model captions in the format similiar to the following:
 
 ```
-{"id": "image_path", "answer": "caption of LLVM",  "p_all": {"word1": [probs, ...], "word2": [probs,...]}, "uncertain_objs": ["obj1", "obj2", ...], "objs": ["city", "street", "cars", "bus", "trees", "side", "road", "buildings", "background", "image", "models", "colors", "markings", "car", "shutters"]}
+{"id": "image_path", "answer": "caption of LLVM",  "p_all": {"word1": [probs, ...], "word2": [probs,...]}, "objs": ["obj1", "obj2", ...]}
 ```
 
  For extracting objects from sentences, natural language processing (NLP) libraries can be used for part-of-speech tagging or named entity recognition, such as NLTK (Natural Language Toolkit) and SpaCy. 
