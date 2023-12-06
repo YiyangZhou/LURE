@@ -56,7 +56,7 @@ Download the pretrained checkpoints according to the Vicuna model from [MiniGPT-
 
 |                                Checkpoint Aligned with Vicuna 13B (stage 1）                               |                                Checkpoint Aligned with Vicuna 13B (stage 2）                               |
 :------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------:|
- [Download](https://drive.google.com/file/d/1u9FRRBB3VovP1HxCAlpD9Lw4t4P6-Yq8/view) | [Downlad](https://drive.google.com/file/d/1a4zLvaiDBr-36pasffmgpvH5P7CKmpze/view)
+ [Download](https://drive.google.com/file/d/1u9FRRBB3VovP1HxCAlpD9Lw4t4P6-Yq8/view) | [Download](https://drive.google.com/file/d/1a4zLvaiDBr-36pasffmgpvH5P7CKmpze/view)
 
 
 Then, set the path to the pretrained checkpoint in the evaluation config file 
