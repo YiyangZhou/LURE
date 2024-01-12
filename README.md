@@ -95,7 +95,7 @@ torchrun --nproc-per-node NUM_GPU train.py --cfg-path train_configs/minigpt4_sta
 
 
 ### Model Inference
-Prepare model captions in the format similiar to the following:
+Prepare model captions in the format similiar to the following (To get the following reasoning format please refer to the sample reasoning file named *'model_vqa_q.py'* we provided in the *'tool'* folder):
 
 ```
 {"id": "image_path", "answer": "caption of LLVM",  "p_all": {"word1": [probs, ...], "word2": [probs,...], ...}, "objs": ["obj1", "obj2", ...]}
@@ -117,7 +117,9 @@ python output_LURE.py --cfg-path /path/to/config.yaml --gpu-id gpu-id --input_ca
 ```
 ### Other
 **Output probabilities during inference**
-If you want to output probabilities during inference, please replace 'your_env_environment/lib/python xx.xx/site-packages/transformers/generation/utils.py' with the 'utils.py' file in the 'tool' folder. We made modifications at lines 2559-2620 in the 'utils.py' file.
+If you want to output probabilities during inference, please replace *'your_env_environment/lib/python xx.xx/site-packages/transformers/generation/utils.py'* with the *'utils.py'* file in the *'tool'* folder. We made modifications at lines 2559-2620 in the *'utils.py'* file. 
+
+Once you have prepared the above steps, you can save the probabilities during the inference process by using sample reasoning file named *'model_vqa_q.py'* provided in *'tool'* folder.
 
 ## Citation
 If you found this work useful, consider giving this repository a star and citing our paper as followed:
