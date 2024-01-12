@@ -115,6 +115,9 @@ Then, run the following command to obtain the rewriting response:
 ```bash
 python output_LURE.py --cfg-path /path/to/config.yaml --gpu-id gpu-id --input_caption /path/to/idk_caption_file  --input_image /path/to/image_file --output_file /path/to/output.jsonl
 ```
+### Other
+**Output probabilities during inference**
+If you want to output probabilities during inference, please replace 'your_env_environment/lib/python xx.xx/site-packages/transformers/generation/utils.py' with the 'utils.py' file in the 'tool' folder. We made modifications at lines 2559-2620 in the 'utils.py' file.
 
 ## Citation
 If you found this work useful, consider giving this repository a star and citing our paper as followed:
