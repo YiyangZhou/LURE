@@ -66,18 +66,11 @@ with torch.no_grad():
             if filename in open(output_file).read():continue
             if filename.endswith((".jpg", ".jpeg", ".png")):
                 file_id = filename
-                # temp_caption = ""
                 qs = ""
                 for temp_caption_item in caption_data:
                     if temp_caption_item["id"] == file_id:
                         qs += temp_caption_item["answer"]
-                # caption_cc = ""
-                # for re_caption_item in re_caption:
-                #     if re_caption_item["image_id"] == file_id:
-                #         caption_cc += re_caption_item["caption"]
-                # qs = 'Describe this image.'
-                # qs = 'List the objects in this picture. Strictly follow the following format: object one, object two, etc.'
-                # qs = f'''These objects exist in the picture: {temp_caption}. This is a reference description:{caption_cc}. Describe this image.'''
+
                 this_question = qs
                 # print(this_question)
                 chat_state = Conversation(
