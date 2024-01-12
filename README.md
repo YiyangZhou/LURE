@@ -124,7 +124,13 @@ Once you have prepared the above steps, you can save the probabilities during th
 
 **How to calculate CHAIR from the description**
 
-We calculated chair metrics based on this [github](https://github.com/LisaAnne/Hallucination).
+We calculated chair metrics based on this [github](https://github.com/LisaAnne/Hallucination). For convenience I've organized it into the following process:
+
+**(Step 1)**: Clone this repository
+
+```bash
+git clone https://github.com/LisaAnne/Hallucination.git
+```
 
 ## Citation
 If you found this work useful, consider giving this repository a star and citing our paper as followed:
