@@ -10,8 +10,8 @@
 </div>
 
 ## News
-* 🔥 [10.03] Our code and data have been organized and are about to be released!
-* [10.03] Our paper is online now: https://arxiv.org/pdf/2310.00754.pdf.
+* 🚀 [11.29] Our new benchmark, [Bingo](https://github.com/gzcch/Bingo), is now live!
+* 🔥 [10.03] Our paper is online now: https://arxiv.org/pdf/2310.00754.pdf.
 
 ## Getting Started
 ### Installation
