@@ -138,6 +138,30 @@ Download the corresponding annotations from the [website](https://cocodataset.or
 
 **(Step 2)**: Prepare your reasoned results and convert them to a standardized format
 
+You get the reasoning results well documented in the following format in jsonl (where the id and answer fields are required):
+
+```
+{"id": "COCO_train2014_000000157393.jpg", "question": xxx, "answer": xxx, "model": xxx}
+```
+
+Convert the result file to the standard format needed for inference according to *'to_chair.py'* provided in the *'tool'* folder. Line 15 [Here](tool/to_chair.py#L15) is adjusted according to the id field of your jsonl to ensure that the sample's id in the output json is as follows:
+
+```
+"image_id": 157393
+```
+
+**(Step 3)**: Calculate chair
+
+```bash
+cd Hallucination/utils/
+```
+
+Replace *'--annotation_path'* and *'--cap_file'* in *'chair.py'* with the folder where you store the annotation and the address of the json you got in the previous step, respectively.
+
+```bash
+python chair.py
+```
+
 
 ## Citation
 If you found this work useful, consider giving this repository a star and citing our paper as followed:
