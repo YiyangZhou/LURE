@@ -122,6 +122,10 @@ If you want to output probabilities during inference, please replace *'your_env_
 
 Once you have prepared the above steps, you can save the probabilities during the inference process by using sample reasoning file named *'model_vqa_p.py'* provided in *'tool'* folder.
 
+**How to calculate CHAIR from the description**
+
+We calculated chair metrics based on this [github](https://github.com/LisaAnne/Hallucination).
+
 ## Citation
 If you found this work useful, consider giving this repository a star and citing our paper as followed:
 ```
