@@ -119,7 +119,7 @@ python output_LURE.py --cfg-path /path/to/config.yaml --gpu-id gpu-id --input_ca
 **Output probabilities during inference**
 If you want to output probabilities during inference, please replace *'your_env_environment/lib/python xx.xx/site-packages/transformers/generation/utils.py'* with the *'utils.py'* file in the *'tool'* folder. We made modifications at lines 2559-2620 in the *'utils.py'* file. 
 
-Once you have prepared the above steps, you can save the probabilities during the inference process by using sample reasoning file named *'model_vqa_q.py'* provided in *'tool'* folder.
+Once you have prepared the above steps, you can save the probabilities during the inference process by using sample reasoning file named *'model_vqa_p.py'* provided in *'tool'* folder.
 
 ## Citation
 If you found this work useful, consider giving this repository a star and citing our paper as followed:
