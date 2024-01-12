@@ -10,7 +10,7 @@
 </div>
 
 ## News
-* 🚀 [11.29] Our new benchmark, [Bingo](https://github.com/gzcch/Bingo), is now live!
+* 🚀 [11.29] Our new benchmark, [Bingo](https://github.com/gzcch/Bingo), is now online!
 * 🔥 [10.03] Our paper is online now: https://arxiv.org/pdf/2310.00754.pdf.
 
 ## Getting Started
@@ -161,6 +161,10 @@ Replace *'--annotation_path'* and *'--cap_file'* in *'chair.py'* with the folder
 ```bash
 python chair.py
 ```
+
+### Checkpoint release
+
+The ckpt we trained based on MiniGPT-4 7B as a baseline is available at [Hugingface](https://huggingface.co/YiyangAiLab/LURE).
 
 ## Related Projects
 
