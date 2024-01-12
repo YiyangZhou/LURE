@@ -178,13 +178,18 @@ The ckpt we trained based on MiniGPT-4 7B as a baseline is available at [Hugingf
 ## Citation
 If you found this work useful, consider giving this repository a star and citing our paper as followed:
 ```
-@misc{zhou2023analyzing,
-      title={Analyzing and Mitigating Object Hallucination in Large Vision-Language Models}, 
-      author={Yiyang Zhou and Chenhang Cui and Jaehong Yoon and Linjun Zhang and Zhun Deng and Chelsea Finn and Mohit Bansal and Huaxiu Yao},
-      year={2023},
-      eprint={2310.00754},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG}
+@article{zhou2023analyzing,
+  title={Analyzing and mitigating object hallucination in large vision-language models},
+  author={Zhou, Yiyang and Cui, Chenhang and Yoon, Jaehong and Zhang, Linjun and Deng, Zhun and Finn, Chelsea and Bansal, Mohit and Yao, Huaxiu},
+  journal={arXiv preprint arXiv:2310.00754},
+  year={2023}
+}
+
+@article{cui2023holistic,
+  title={Holistic analysis of hallucination in gpt-4v (ision): Bias and interference challenges},
+  author={Cui, Chenhang and Zhou, Yiyang and Yang, Xinyu and Wu, Shirley and Zhang, Linjun and Zou, James and Yao, Huaxiu},
+  journal={arXiv preprint arXiv:2311.03287},
+  year={2023}
 }
 ```
 
