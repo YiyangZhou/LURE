@@ -126,7 +126,7 @@ Once you have prepared the above steps, you can save the probabilities during th
 
 We calculated chair metrics based on this [github](https://github.com/LisaAnne/Hallucination). For convenience I've organized it into the following process:
 
-**(Step 1)**: Cloning the repository and preparing annotations
+**(Step 1)** Cloning the repository and preparing annotations
 
 ```bash
 git clone https://github.com/LisaAnne/Hallucination.git
@@ -136,7 +136,7 @@ mkdir annotations
 
 Download the corresponding annotations from the [website](https://cocodataset.org/#download) (2014 Train/Val annotations) and extract them to the folder *'annotations'*.
 
-**(Step 2)**: Prepare your reasoned results and convert them to a standardized format
+**(Step 2)** Prepare your reasoned results and convert them to a standardized format
 
 You get the reasoning results well documented in the following format in jsonl (where the id and answer fields are required):
 
