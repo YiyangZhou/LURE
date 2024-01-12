@@ -162,6 +162,14 @@ Replace *'--annotation_path'* and *'--cap_file'* in *'chair.py'* with the folder
 python chair.py
 ```
 
+## Related Projects
+
+- [CHAIR](https://github.com/LisaAnne/Hallucination)
+- [Vicuna](https://github.com/lm-sys/FastChat)
+- [MiniGPT-4](https://github.com/Vision-CAIR/MiniGPT-4)
+- [mPLUG-Owl](https://github.com/X-PLUG/mPLUG-Owl)
+- [LLaVA](https://github.com/haotian-liu/LLaVA)
+- [Bingo](https://github.com/gzcch/Bingo)
 
 ## Citation
 If you found this work useful, consider giving this repository a star and citing our paper as followed:
