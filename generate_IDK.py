@@ -27,7 +27,7 @@ def split_words(text):
 def replace_words_with_idk(sentence, objlist, p_all, un):
     words = (sentence.replace('.', ' .').replace(',', ' ,')).split()
     num_words = len(words)
-    num_replacement = int(num_words * 0.2) 
+    num_replacement = int(num_words * 0.2)
     del_list=list()
     for i in range(num_words - num_replacement, num_words):
         if words[i] in objlist or words[i][:-1] in objlist or words[i][:-2] in objlist or words[i][:-3] in objlist \
@@ -50,7 +50,7 @@ def replace_words_with_idk(sentence, objlist, p_all, un):
     words = new_sentence.split()
     for i in range(len(words)):
         obj_word = get_word(words[i], objlist)
-        if obj_word == -1: continue
+        if obj_word == -1 or len(p_all[obj_word])==0: continue
         if -np.log((p_all[obj_word])[0])> un:
             words[i] = "[IDK]"
             if i-1>=0:
@@ -88,7 +88,7 @@ if __name__ == "__main__":
     with open(input_file, 'r') as file:
             for line in file:
                 data = json.loads(line.strip())
-                answer = replace_words_with_idk(data['answer'], data["objs"], data["p_all"], un)
+                answer = replace_words_with_idk(data['caption'], data["objs"], data["p_all"], un)
                 data['caption'] = answer
                 with open(onput_file, 'a+') as file:
                     json.dump(data, file)
