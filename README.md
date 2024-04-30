@@ -170,7 +170,7 @@ python chair.py
 
 ### Checkpoint release
 
-The ckpt we trained based on MiniGPT-4 7B as a baseline is available at [Hugingface](https://huggingface.co/YiyangAiLab/LURE).
+The ckpt we trained based on MiniGPT-4 13B as a baseline is available at [Hugingface](https://huggingface.co/YiyangAiLab/LURE).
 
 ## Related Projects
 
